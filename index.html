@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+	<link rel="icon" href="css/favicon.png" type="image/png">
+	<script src="index.js"></script>
+	<title>Identicon</title>
+</head>
+<body>
+	<div class="montserrat centered">
+		<div class="header">
+			<h1>Identicon</h1>
+			<p>Easy tool to watch GitHub <a href="https://github.blog/2013-08-14-identicons/" target="popup">identicons</a></p>
+		</div>
+		<div class="main">
+			<p>Input GitHub name:</p>
+			<input class="inpblue" type="text" id="nameinput" name="nameinput" value="dazmaks" onchange="updateImage();">
+			<br>
+			<img id="identicon" class="per20" onclick="imageClick();" src="https://github.com/identicons/dazmaks.png">
+			<!--<img id="avatar" class="per20" onclick="imageClick();" src="https://github.com/dazmaks.png">-->
+			<p>My <a href="https://github.com/dazmaks" target="popup">GitHub</a></p>
+		</div>
+	</div>
+</body>
+</html>

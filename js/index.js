@@ -1,3 +1,9 @@
+function isWord(word) {
+	if(!word) return false;
+	if(!word.replace(/\s/g, '')) return false;
+	return true;
+}
+
 function colorBlue(id) {
 	if (document.getElementById(id).classList.contains('inpred')){
 		document.getElementById(id).classList.remove('inpred');
@@ -18,15 +24,15 @@ function colorRed(id) {
 	}
 }
 
-function updateImage() {
+function updateImage(id) {
 	console.log("updateImage function started");
 	nameinp = document.getElementById('nameinput').value;
 	console.log('word = "'+nameinp+'"');
-	if(nameinp){
+	if(isWord(nameinp)){
 		colorBlue("nameinput");
 		let idlink="https://github.com/identicons/"+nameinp+".png";
 		console.log("idlink = "+idlink);
-		document.getElementById("identicon").src = idlink;
+		document.getElementById(id).src = idlink;
 	}else{
 		colorRed("nameinput");
 	}
@@ -37,6 +43,13 @@ function updateImage() {
 }
 
 function imageClick() {
-	let gitlink="https://github.com/"+document.getElementById('nameinput').value;
-	window.open(gitlink);
+	nameinp = document.getElementById('nameinput').value;
+	if(isWord(nameinp)){
+		colorBlue("nameinput");
+		let gitlink="https://github.com/"+document.getElementById('nameinput').value;
+		window.open(gitlink);
+		updateImage("identicon");
+	}else{
+		colorRed("nameinput");
+	}
 }

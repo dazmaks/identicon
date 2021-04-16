@@ -1,2 +1,2 @@
-identicons preview tool
-https://dazmaks.github.io/identicon/
+#identicon
+simple identicons preview

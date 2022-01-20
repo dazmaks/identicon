@@ -1,2 +1,5 @@
-# identicon
-simple identicons preview
+# Identicon
+Simple identicons preview tool.
+
+# License
+[WTFPL](LICENSE)
